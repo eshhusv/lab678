@@ -20,6 +20,7 @@ namespace lab678
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<int> mas=new List<int>();
         public MainWindow()
         {
             InitializeComponent();
@@ -27,7 +28,15 @@ namespace lab678
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            string str=txtInterMass.Text;
+            string[] strmas=str.Split(',');
+            string res = "";
+            foreach (var item in strmas)
+            {
+                mas.Add(int.Parse(item));
+                res += item+" ";
+            }
+            tbMassive.Text = res;
         }
     }
 }
