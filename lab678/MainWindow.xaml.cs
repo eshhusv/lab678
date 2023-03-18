@@ -21,6 +21,7 @@ namespace lab678
     public partial class MainWindow : Window
     {
         private List<int> mas=new List<int>();
+        private List<double> masReal=new List<double>();
         public MainWindow()
         {
             InitializeComponent();
@@ -72,6 +73,35 @@ namespace lab678
             txtInterMass.Clear();
             tbMassive.Text = "";
             tbResult.Text = "";
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                int n = int.Parse(txtSize.Text);
+                for (int i = 0; i < n; i++)
+                {
+                    Random rnd=new Random();
+                    double temp = rnd.NextDouble()*100-50;
+                    masReal.Add(temp);
+                    tbMas.Text += temp.ToString("F2") + " ";
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            int count = 0;
+            foreach (var item in masReal)
+            {
+                if(item>-15&&item<4) count++;
+            }
+            lbResult.Text ="количество элементов промежутка (-15,4):"+count.ToString();
         }
     }
 }
