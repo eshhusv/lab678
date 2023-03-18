@@ -17,19 +17,21 @@
         <Label Content="Введите элементы массива"
                Grid.Row="0"/>
         <TextBox x:Name="txtInterMass" Grid.Row="1"
-                 Margin="10" />
+                 Margin="10" FontSize="20" KeyDown="txtInterMass_KeyDown"/>
         <TextBlock Grid.Row="2" Margin="10"
-                   Name="tbMassive"/>
+                   Name="tbMassive" FontSize="20"/>
         <StackPanel Grid.Row="3" 
                     Orientation="Horizontal"
                     HorizontalAlignment="Center">
             <Button Content="Создать массив"
-                    Margin="10" Click="Button_Click"/>
+                    Margin="10" Click="Button_Click" Width="100"/>
             <Button Content="Произведение" 
-                    Margin="10"/>
+                    Margin="10" Click="Button_Click_1" Width="100"/>
+            <Button Content="Сброс" Margin="10"
+                     Width="100" Click="Button_Click_2"/>
         </StackPanel>
         <TextBlock Grid.Row="4" Margin="10" 
-                   Name="tbResult"/>
+                   Name="tbResult" FontSize="20" TextWrapping="Wrap"/>
 
     </Grid>
 </Window>
