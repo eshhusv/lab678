@@ -103,5 +103,13 @@ namespace lab678
             }
             lbResult.Text ="количество элементов промежутка (-15,4):"+count.ToString();
         }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            masReal.Clear();
+            lbResult.Text = "";
+            tbMas.Text = "";
+            txtSize.Clear();
+        }
     }
 }

@@ -9,10 +9,6 @@
     <TabControl>
         <TabItem Header="Базовый уровень 29">
             <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="197*"/>
-                    <ColumnDefinition Width="195*"/>
-                </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
                     <RowDefinition Height="3*"/>
@@ -43,21 +39,16 @@
         </TabItem>
         <TabItem Header="Базовый уровень 30">
             <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="79*"/>
-                    <ColumnDefinition Width="96*"/>
-                    <ColumnDefinition Width="217*"/>
-                </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="2*"/>
                     <RowDefinition Height="3*"/>
-                    <RowDefinition Height="6*"/>
                     <RowDefinition Height="4*"/>
-                    <RowDefinition Height="8*"/>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="4*"/>
                 </Grid.RowDefinitions>
                 <Label Grid.Row="0" Content="Введите размер массива"
-                       FontSize="20" Grid.ColumnSpan="3" Margin="0,0,0,52" Grid.RowSpan="2"/>
-                <Grid Grid.Row="1" Grid.ColumnSpan="3" Margin="0,0,0,104" Grid.RowSpan="2">
+                       FontSize="15" Margin="10"/>
+                <Grid Grid.Row="1" Margin="10">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="3*"/>
                         <ColumnDefinition Width="2*"/>
@@ -67,9 +58,9 @@
                     <Button Grid.Column="1" Content="Сгенерировать"
                             Margin="10" Click="Button_Click_3"/>
                 </Grid>
-                <TextBlock FontSize="20" x:Name="tbMas" Margin="10,10,10,10" Grid.Row="2" Grid.ColumnSpan="3"
+                <TextBlock FontSize="20" x:Name="tbMas" Margin="10" Grid.Row="2"
                            TextWrapping="Wrap"/>
-                <Grid Grid.Row="2" Grid.ColumnSpan="3" Margin="0,104,0,139" Grid.RowSpan="3">
+                <Grid Grid.Row="3" Margin="10">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
@@ -77,10 +68,11 @@
                     <Button Content="Количество элементов"
                             Margin="10" Grid.Column="0" Click="Button_Click_4"/>
                     <Button Content="Сброс" Margin="10"
-                            Grid.Column="1"/>
+                            Grid.Column="1" Click="Button_Click_5"/>
                 </Grid>
-                <TextBlock x:Name="lbResult" Margin="10,10,10,10"
-                           Grid.Row="4" FontSize="20" Grid.ColumnSpan="3"/>
+                <TextBlock x:Name="lbResult" Margin="10"
+                           Grid.Row="4" FontSize="20"
+                           TextWrapping="Wrap"/>
             </Grid>
         </TabItem>
     </TabControl>
