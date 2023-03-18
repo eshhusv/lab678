@@ -77,6 +77,7 @@ namespace lab678
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            tbMas.Text = "";
             try
             {
                 int n = int.Parse(txtSize.Text);
@@ -101,7 +102,7 @@ namespace lab678
             {
                 if(item>-15&&item<4) count++;
             }
-            lbResult.Text ="количество элементов промежутка (-15,4):"+count.ToString();
+            lbResult.Text ="Количество элементов промежутка (-15,4):"+count.ToString();
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
