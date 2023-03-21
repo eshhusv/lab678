@@ -81,7 +81,8 @@
             </TabControl>
         </TabItem>
         <TabItem Header="Лабораторная 7">
-            
+        </TabItem>
+        <TabItem Header="Лабораторная 8">
         </TabItem>
     </TabControl>
 </Window>
