@@ -11,6 +11,10 @@
             <TabControl>
                 <TabItem Header="Базовый уровень 29">
                     <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="187*"/>
+                            <ColumnDefinition Width="247*"/>
+                        </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="1*"/>
                             <RowDefinition Height="3*"/>
@@ -25,9 +29,9 @@
                         <TextBlock Grid.Row="2" Margin="10,10,10,10"
                                Name="tbMassive" FontSize="20" Grid.ColumnSpan="2"
                                    />
-                        <StackPanel Grid.Row="3" 
+                        <StackPanel Grid.Row="2" 
                                 Orientation="Horizontal"
-                                HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="16,0,0,114" Grid.RowSpan="2">
+                                HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="16,120,0,114" Grid.RowSpan="3">
                             <Button Content="Создать массив"
                                 Margin="10" Click="Button_Click" Width="100"/>
                             <Button Content="Произведение" 
@@ -81,6 +85,66 @@
             </TabControl>
         </TabItem>
         <TabItem Header="Лабораторная 7">
+            <TabControl>
+                <TabItem Header="Базовый уровень 29">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <ListBox x:Name="lbQueqe" Grid.Column="0" Margin="10"/>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="8*"/>
+                                <RowDefinition Height="2*"/>
+                            </Grid.RowDefinitions>
+                            <Label Content="Введите вещественное число" Grid.Row="0"/>
+                            <TextBox x:Name="txtInputReal" Margin="5" Grid.Row="1"/>
+                            <Button Content="Добавить" Grid.Row="2" Margin="10" Click="Button_Click_6"/>
+                            <TextBlock x:Name="QueqeResult" Margin="10" Grid.Row="3"/>
+                            <Button Content="Количество отрицательных" Grid.Row="4"
+                                    Margin="10" Click="Button_Click_7"/>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Базовый уровень 30" Height="20" VerticalAlignment="Top">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TreeView Grid.Column="0" Name="treeList" Margin="10">
+                        </TreeView>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Orientation="Vertical" Grid.Row="0"
+                                        VerticalAlignment="Center">
+                                <Label Content="Введите марку монитора"/>
+                                <TextBox Name="nameMonitor" FontSize="20" Margin="10 0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" Grid.Row="1"
+                                        VerticalAlignment="Center">
+                                <Label Content="Введите диагональ"/>
+                                <TextBox Name="diagonalMonitor" FontSize="20" Margin="10 0" />
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" Grid.Row="2"
+                                        VerticalAlignment="Center">
+                                <Label Content="Введите цену"/>
+                                <TextBox Name="priceMonitor" FontSize="20" Margin="10 0" />
+                            </StackPanel>
+                            <Button Content="Добавить" Grid.Row="3" Margin="10" Click="Button_Click_8"/>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+            </TabControl>
         </TabItem>
         <TabItem Header="Лабораторная 8">
         </TabItem>

@@ -22,6 +22,8 @@ namespace lab678
     {
         private List<int> mas=new List<int>();
         private List<double> masReal=new List<double>();
+        private Queue<double> queueReal=new Queue<double>();
+        private NodeStack<Monitor> stack=new NodeStack<Monitor> ();
         public MainWindow()
         {
             InitializeComponent();
@@ -111,6 +113,40 @@ namespace lab678
             lbResult.Text = "";
             tbMas.Text = "";
             txtSize.Clear();
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            double n=double.Parse(txtInputReal.Text);
+            queueReal.Enqueue(n);
+            lbQueqe.Items.Add(n.ToString());
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            int count = 0;
+            foreach (var item in queueReal)
+            {
+                if (item < 0) count++;
+            }
+            QueqeResult.Text= count.ToString(); 
+        }
+
+        private void Button_Click_8(object sender, RoutedEventArgs e)
+        {
+            Monitor monitor = new Monitor(nameMonitor.Text, int.Parse(diagonalMonitor.Text),
+                int.Parse(priceMonitor.Text));
+            stack.Push(monitor);
+            TreeViewItem item = new TreeViewItem();
+            item.Tag ="Запись "+stack.Count;
+            item.Header = "Запись " + stack.Count;
+            item.Items.Add(monitor.Name);
+            item.Items.Add(monitor.Diagonal);
+            item.Items.Add(monitor.Price);
+            treeList.Items.Add(item);
+            nameMonitor.Clear();
+            diagonalMonitor.Clear();
+            priceMonitor.Clear();
         }
     }
 }
