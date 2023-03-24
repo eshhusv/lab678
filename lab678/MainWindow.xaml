@@ -144,6 +144,45 @@
                         </Grid>
                     </Grid>
                 </TabItem>
+                <TabItem Header="Средний уровень 29">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="6*"/>
+                                <RowDefinition Height="1*"/>
+                            </Grid.RowDefinitions>
+                            <ListBox Grid.Row="0" Margin="10" Name="lbQueueReal"/>
+                            <Button Grid.Row="1" Content="Удалить" Margin="10"/>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="8*"/>
+                            </Grid.RowDefinitions>
+                            <Label Content="Введите число" Grid.Row="0"/>
+                            <TextBox x:Name="txtQueqeEnter" Grid.Row="1"
+                                     Margin="5"/>
+                            <Grid Grid.Row="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Button Grid.Column="0" Content="Добавить"
+                                        Margin="10"/>
+                                <Button Grid.Column="1" Content="Вычислить"
+                                        Margin="10"/>
+                            </Grid>
+                            <TextBlock x:Name="txbCountPositive" Grid.Row="4"
+                                       Margin="10"/>
+                        </Grid>
+                    </Grid>
+                </TabItem>
             </TabControl>
         </TabItem>
         <TabItem Header="Лабораторная 8">

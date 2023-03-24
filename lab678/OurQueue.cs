@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace lab678
 {
-    internal class Queue<T>:IEnumerable<T>
+    internal class OurQueue<T>:IEnumerable<T>
     {
         Node<T> head; // головной/первый элемент
         Node<T> tail; // последний/хвостовой элемент
