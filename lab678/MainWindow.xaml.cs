@@ -24,6 +24,7 @@ namespace lab678
         private List<double> masReal=new List<double>();
         private Queue<double> queueReal=new Queue<double>();
         private NodeStack<Monitor> stack=new NodeStack<Monitor> ();
+        private OurQueue<double> doubleQeeue=new OurQueue<double> ();
         public MainWindow()
         {
             InitializeComponent();
@@ -147,6 +148,38 @@ namespace lab678
             nameMonitor.Clear();
             diagonalMonitor.Clear();
             priceMonitor.Clear();
+        }
+
+        private void Button_Click_9(object sender, RoutedEventArgs e)
+        {
+            double n = double.Parse(txtQueqeEnter.Text);
+            doubleQeeue.Enqueue(n);
+            Perebor();
+            txtQueqeEnter.Clear();
+        }
+        void Perebor()
+        {
+            lbQueueReal.Items.Clear();
+            foreach (double item in doubleQeeue)
+            {
+                lbQueueReal.Items.Add(item);
+            }
+        }
+
+        private void Button_Click_10(object sender, RoutedEventArgs e)
+        {   
+            doubleQeeue.Dequeue();
+            Perebor();
+        }
+
+        private void Button_Click_11(object sender, RoutedEventArgs e)
+        {
+            double P = 1;
+            foreach (double item in doubleQeeue)
+            {
+                if (item > 0) P *= item;
+            }
+            txbCountPositive.Text = "Произведение положительных " + P;
         }
     }
 }

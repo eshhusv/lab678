@@ -147,18 +147,19 @@
                 <TabItem Header="Средний уровень 29">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
+                            <ColumnDefinition Width="200*"/>
+                            <ColumnDefinition Width="17*"/>
+                            <ColumnDefinition Width="217*"/>
                         </Grid.ColumnDefinitions>
-                        <Grid Grid.Column="0">
+                        <Grid Grid.Column="0" Grid.ColumnSpan="2">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="6*"/>
                                 <RowDefinition Height="1*"/>
                             </Grid.RowDefinitions>
                             <ListBox Grid.Row="0" Margin="10" Name="lbQueueReal"/>
-                            <Button Grid.Row="1" Content="Удалить" Margin="10"/>
+                            <Button Grid.Row="1" Content="Удалить" Margin="10" Click="Button_Click_10"/>
                         </Grid>
-                        <Grid Grid.Column="1">
+                        <Grid Grid.Column="2">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="1*"/>
                                 <RowDefinition Height="1*"/>
@@ -174,12 +175,12 @@
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
                                 <Button Grid.Column="0" Content="Добавить"
-                                        Margin="10"/>
+                                        Margin="10" Click="Button_Click_9"/>
                                 <Button Grid.Column="1" Content="Вычислить"
-                                        Margin="10"/>
+                                        Margin="10" Click="Button_Click_11"/>
                             </Grid>
                             <TextBlock x:Name="txbCountPositive" Grid.Row="4"
-                                       Margin="10"/>
+                                       Margin="10" TextWrapping="Wrap"/>
                         </Grid>
                     </Grid>
                 </TabItem>
