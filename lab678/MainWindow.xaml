@@ -119,28 +119,33 @@
                         <TreeView Grid.Column="0" Name="treeList" Margin="10">
                         </TreeView>
                         <Grid Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="94*"/>
+                                <ColumnDefinition Width="24*"/>
+                                <ColumnDefinition Width="99*"/>
+                            </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition/>
                                 <RowDefinition/>
                                 <RowDefinition/>
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
-                            <StackPanel Orientation="Vertical" Grid.Row="0"
-                                        VerticalAlignment="Center">
+                            <StackPanel Orientation="Vertical"
+                                        VerticalAlignment="Center" Grid.ColumnSpan="3">
                                 <Label Content="Введите марку монитора"/>
                                 <TextBox Name="nameMonitor" FontSize="20" Margin="10 0"/>
                             </StackPanel>
                             <StackPanel Orientation="Vertical" Grid.Row="1"
-                                        VerticalAlignment="Center">
+                                        VerticalAlignment="Center" Grid.ColumnSpan="3">
                                 <Label Content="Введите диагональ"/>
                                 <TextBox Name="diagonalMonitor" FontSize="20" Margin="10 0" />
                             </StackPanel>
                             <StackPanel Orientation="Vertical" Grid.Row="2"
-                                        VerticalAlignment="Center">
+                                        VerticalAlignment="Center" Grid.ColumnSpan="3">
                                 <Label Content="Введите цену"/>
                                 <TextBox Name="priceMonitor" FontSize="20" Margin="10 0" />
                             </StackPanel>
-                            <Button Content="Добавить" Grid.Row="3" Margin="10" Click="Button_Click_8"/>
+                            <Button Content="Добавить" Grid.Row="3" Margin="10,10,10,10" Click="Button_Click_8" Grid.ColumnSpan="3"/>
                         </Grid>
                     </Grid>
                 </TabItem>
@@ -187,6 +192,41 @@
             </TabControl>
         </TabItem>
         <TabItem Header="Лабораторная 8">
+            <TabControl>
+                <TabItem Header="Базовый уровень 23">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200*"/>
+                            <ColumnDefinition Width="17*"/>
+                            <ColumnDefinition Width="217*"/>
+                        </Grid.ColumnDefinitions>
+                        <ListBox Grid.Row="0" Margin="10" Name="lbLab8"/>
+                        <Grid Grid.Column="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="8*"/>
+                            </Grid.RowDefinitions>
+                            <Label Content="Введите число" Grid.Row="0"/>
+                            <TextBox x:Name="txtLab8" Grid.Row="1"
+                                         Margin="5"/>
+                            <Grid Grid.Row="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Button Grid.Column="0" Content="Добавить"
+                                            Margin="10" Click="Button_Click_12"/>
+                                <Button Grid.Column="1" Content="Добавить 12"
+                                            Margin="10" Click="Button_Click_13"/>
+                            </Grid>
+                            <TextBlock x:Name="txbResultLab8" Grid.Row="4"
+                                           Margin="10" TextWrapping="Wrap"/>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+            </TabControl>
         </TabItem>
     </TabControl>
 </Window>

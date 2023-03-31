@@ -25,9 +25,11 @@ namespace lab678
         private Queue<double> queueReal=new Queue<double>();
         private NodeStack<Monitor> stack=new NodeStack<Monitor> ();
         private OurQueue<double> doubleQeeue=new OurQueue<double> ();
+        private OurList<int> intList=new OurList<int> ();
         public MainWindow()
         {
             InitializeComponent();
+           // lbLab8.ItemsSource = intList;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -180,6 +182,40 @@ namespace lab678
                 if (item > 0) P *= item;
             }
             txbCountPositive.Text = "Произведение положительных " + P;
+        }
+
+        private void Button_Click_12(object sender, RoutedEventArgs e)
+        {
+            int n=int.Parse(txtLab8.Text);
+            intList.Add(n);
+            UpdateIntList();
+            txtLab8.Clear();
+        }
+
+        private void Button_Click_13(object sender, RoutedEventArgs e)
+        {
+            int index = -1;
+            int i = 0;
+            foreach (int item in intList)
+            {
+                if (item > 10)
+                {
+                    index = i;
+                    break;
+                }
+                i++;
+            }
+            intList.Insert(12, index);
+            UpdateIntList();
+        }
+        private void UpdateIntList()
+        {
+            lbLab8.Items.Clear();
+            foreach (int item in intList)
+            {
+                lbLab8.Items.Add(item);
+            }
+            //lbLab8.Items.Refresh();
         }
     }
 }
